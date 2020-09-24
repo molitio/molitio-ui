@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "molitio-ng"
+    }
+  },
+  "defaultProject": "molitio-ng",
+  "cli": {
+    "analytics": "2a5c9baf-c11c-4c78-ab84-f6b91847666a"
+  }
 }

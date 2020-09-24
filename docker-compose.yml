@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  
+  molitio-ng:
+    build: './molitio-ng'
+    image: 'molitio-ng'
+    ports: 
+      # - 80:80
+      # - 443:443
+      - 5000:5000
+      - 5001:5001
+    #environment: 
+      # - ENV=dev
+    restart: always
+    
+  molitio-api:
+    build: './molitio-api'
+    volumes: 
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+    environment: 
+      NODE_ENV: development
+      #NODE_ENV: production
+    restart: always
+
