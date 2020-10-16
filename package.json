@@ -1,0 +1,24 @@
+{
+  "name": "molitio-codegen",
+  "version": "1.0.0",
+  "description": "Code generation package",
+  "main": "codegen.ts",
+  "dependencies": {
+    "swagger-js-codegen": "^1.13.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/molitio/molitio/molitio"
+  },
+  "keywords": [
+    "codegen"
+  ],
+  "author": "Peter Koller",
+  "license": "MIT"
+}

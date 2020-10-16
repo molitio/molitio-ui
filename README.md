@@ -8,12 +8,6 @@ connecting concepts yet not documented. As time goes it will be.
 # Introduction 
 Open source initiative to develop impactful digital solutions for human problems in service of humanity for every human being.
 
-Built on the following technologies:
-- Angular 10 - Frontend
-- Node.Js - API
-- MongoDB - Database
-- Docker - Containerization
-
 The project encompass multiple micro service based outlets, each serving an individual purpose.
 
 # Main initiatieves
