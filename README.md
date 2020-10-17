@@ -2,6 +2,7 @@ Under development disclaimer: the following information regarding the project re
 direction for the future. At the early stage of it, many components are not yet realized and possibly 
 change in the future. The projects seeks like minded individuals and it is open source. Many of the 
 connecting concepts yet not documented. As time goes it will be.  
+Migrated from Azure DevOps to GitHub
 
 # Molitio - In service of humanity for every human being.
 
