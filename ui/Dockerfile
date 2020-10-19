@@ -1,9 +1,5 @@
 #currently configured for dev environment
 #TODO: configuration for public release
-FROM node:12 AS builder
-WORKDIR /src/usr/dist
-COPY package*.json ./
-RUN npm install
-EXPOSE 4200
-CMD [ "npm", "start" ]
-COPY . .
+FROM nginx:1.17.1-alpine
+COPY nginx.conf etc/nginx/nginx.conf
+COPY /dist/molitio-ng /usr/share/nginx/html
