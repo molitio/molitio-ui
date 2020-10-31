@@ -1,2 +1,5 @@
-dist
-node_modules
+# distribution
+**/dist
+
+# node
+**/node_modules

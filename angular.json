@@ -69,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "molitio-ng:build"
+            "browserTarget": "molitio-ng:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

@@ -1,0 +1,21 @@
+.siteBackground {
+  background: url(./assets/static/earth.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  top: 0;
+  z-index: -1;
+}
+
+.navigatonBar {
+position: fixed;
+top: 0;
+z-index: 9;
+}
+
+.routerOutlet {
+position: fixed;
+top: 20px;
+z-index: 1;
+}
