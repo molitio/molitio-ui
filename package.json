@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "ng serve --aot=true --open",
     "docker": "ng build --prod && dockerPublishLocal",
     "dockerPublishLocal": "docker build -t molitio-ng .",
     "build": "ng build",
