@@ -1,26 +1,27 @@
-Under development disclaimer: the following information regarding the project reflects the current 
-direction for the future. At the early stage of it, many components are not yet realized and possibly 
-change in the future. The projects seeks like minded individuals and it is open source. Many of the 
-connecting concepts yet not documented. As time goes it will be.  
-Migrated from Azure DevOps to GitHub
+# MolitioNg
 
-# Molitio - In service of humanity for every human being.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
-# Introduction 
-Open source initiative to develop impactful digital solutions for human problems in service of humanity for every human being.
+## Development server
 
-The project encompass multiple micro service based outlets, each serving an individual purpose.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# Main initiatieves
- - # #everyhuman
-    Description: A community based resource distribution system that samples the needs of individuals and the 
-    possible contribution of individuals and connects them a accordingly. Based on giving.
-- # #hulaf
-    Description: A human lost and found that enables the identification of missing humans. It seeks to 
-    provide emergency response to listed contacts and possibly local ER organizations
-- blockchain based DAPP (Decentralized applications) to provide an immutable ledger for transactions
-- docker containerization for applications
+## Code scaffolding
 
-# Contributors
-    Peter Koller
-    
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
