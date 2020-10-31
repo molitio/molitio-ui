@@ -1,25 +1,48 @@
 {
-  "name": "molitio-codegen",
-  "version": "1.0.0",
-  "description": "Code generation package",
-  "main": "codegen.ts",
-  "dependencies": {
-    "molitio-contract": "^1.0.0",
-    "swagger-js-codegen": "^1.13.0",
-    "typescript": "^4.0.3"
-  },
-  "devDependencies": {},
+  "name": "molitio-ng",
+  "version": "0.0.0",
   "scripts": {
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "docker": "ng build --prod && dockerPublishLocal",
+    "dockerPublishLocal": "docker build -t molitio-ng .",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@ssh.dev.azure.com:v3/molitio/molitio/molitio"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.1.0",
+    "@angular/common": "~10.1.0",
+    "@angular/compiler": "~10.1.0",
+    "@angular/core": "~10.1.0",
+    "@angular/forms": "~10.1.0",
+    "@angular/platform-browser": "~10.1.0",
+    "@angular/platform-browser-dynamic": "~10.1.0",
+    "@angular/router": "~10.1.0",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
   },
-  "keywords": [
-    "codegen"
-  ],
-  "author": "Peter Koller",
-  "license": "MIT"
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.1002.0",
+    "@angular/cli": "~10.1.x",
+    "@angular/compiler-cli": "~10.1.0",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.0.2"
+  }
 }
