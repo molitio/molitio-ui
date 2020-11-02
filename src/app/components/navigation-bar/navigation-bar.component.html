@@ -1,5 +1,32 @@
-<nav>
+<div class="logo">
+    <molitio-molitio-logo></molitio-molitio-logo>
+</div>
+<button mat-button [matMenuTriggerFor="menu"]>
+  Menu
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
     <a routerLink="/welcome" routerLinkActive="active">welcome</a>
-    <a routerLink="/mission-board">mission board</a>
-    <a routerLink="/about">about</a>
+  </button>
+  <button mat-menu-item>
+  <a routerLink="/mission-board">mission board</a>
+</button>
+<button mat-menu-item>
+  <a routerLink="/about">about</a>
+</button>
+</mat-menu>
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon">
+  home
+</mat-icon>
+ -->
+
+<nav class="nav">
+  <ul>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+  </ul>
 </nav>
