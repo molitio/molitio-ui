@@ -5,16 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MolitioLogoComponent } from './components/molitio-logo/molitio-logo.component';
-import { AboutComponent } from './components/about/about.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
-const appRoutes: Routes = [
-  { path: 'welcome', component: LandingPageComponent },
-  { path: 'about', component: AboutComponent },
-  { path: '*', component: PageNotFoundComponent }
-];
+import { MissionBoardComponent } from './components/mission-board/mission-board.component';
 
 @NgModule({
   declarations: [
@@ -22,15 +16,13 @@ const appRoutes: Routes = [
     LandingPageComponent,
     MolitioLogoComponent,
     NavigationBarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MissionBoardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-    )
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
