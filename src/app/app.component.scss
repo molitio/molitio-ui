@@ -1,27 +1,27 @@
 .siteBackground {
-  background-image: url(./assets/static/earth.jpg) ;
+  /*  background-image: url(./assets/static/earth.jpg);
   background-repeat: no-repeat;
   background-position: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  position: absolute;
+  position: static;
   width: 100%;
   height: 100%;
   opacity: 50%;
   top: 0;
-  z-index: -1;
+  z-index: -1;*/
 }
 
 .navigatonBar {
-position: fixed;
+/* position: fixed;
 top: 0;
-z-index: 9;
+z-index: 9; */
 }
 
 .routerOutlet {
-position: relative;
+/* position: relative;
 top: 20px;
-z-index: 1;
+z-index: 1; */
 }

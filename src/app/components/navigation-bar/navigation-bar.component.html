@@ -1,32 +1,29 @@
-<div class="logo">
-    <molitio-molitio-logo></molitio-molitio-logo>
+<div class="container">
+  <div fxLayout="row">
+    <div fxFlex="20" fxFlexOrder="0">
+      <molitio-molitio-logo></molitio-molitio-logo>
+    </div>
+    <div fxFlex="10" fxFlexOrder="1">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <a routerLink="" routerLinkActive="active">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">
+            home
+          </mat-icon></a>
+        </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <a routerLink="/welcome" routerLinkActive="inactive">welcome</a>
+        </button>
+        <button mat-menu-item>
+          <a routerLink="/mission-board">mission board</a>
+        </button>
+        <button mat-menu-item>
+          <a routerLink="/about">about</a>
+        </button>
+      </mat-menu>
+    </div>
+    <div fxFlex="70" fxFlexOrder="2" fxHide="false" fxHide.gt-md>
+      <span>Messages: new message from site</span>
+    </div>
+  </div>
 </div>
-<button mat-button [matMenuTriggerFor="menu"]>
-  Menu
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <a routerLink="/welcome" routerLinkActive="active">welcome</a>
-  </button>
-  <button mat-menu-item>
-  <a routerLink="/mission-board">mission board</a>
-</button>
-<button mat-menu-item>
-  <a routerLink="/about">about</a>
-</button>
-</mat-menu>
-<!-- <mat-icon aria-hidden="false" aria-label="Example home icon">
-  home
-</mat-icon>
- -->
-
-<nav class="nav">
-  <ul>
-    <li>
-    </li>
-    <li>
-    </li>
-    <li>
-    </li>
-  </ul>
-</nav>

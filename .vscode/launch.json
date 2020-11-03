@@ -5,17 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch via NPM",
-            "request": "launch",
-            "runtimeArgs": [
-                "run-script",
-                "dev"
-            ],
-            "runtimeExecutable": "npm",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "pwa-node"
+            "type": "firefox",
+            "request": "attach",
+            "name": "firefox attach",
+            "webRoot": "${workspaceFolder}",
+            "url": "localhost:4200"
         }
 
     ]

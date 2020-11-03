@@ -1,7 +1,12 @@
-<div class="logo"></div>
-<div class="brand">
-  <span>{{ brand }}</span>
-  <br />
-  <span>{{ brandMessage }}</span>
+<div class="container">
+  <div fxLayout="row">
+    <div fxFlex fxFlexOrder="0" class="logo">
+      <img src="{{ logoSrc }}" alt="logo" />
+    </div>
+
+    <div fxFlex fxFlexOrder="1" class="brand">
+      <span>{{ brand }}</span>
+      <span>{{ brandMessage }}</span>
+    </div>
+  </div>
 </div>
-<br />
