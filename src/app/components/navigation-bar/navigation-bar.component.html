@@ -5,15 +5,11 @@
     </div>
     <div fxFlex="10" fxFlexOrder="1">
       <button mat-button [matMenuTriggerFor]="menu">
-        <a routerLink="" routerLinkActive="active">
-          <mat-icon aria-hidden="false" aria-label="Example home icon">
-            home
-          </mat-icon></a>
+          <mat-icon aria-hidden="false" aria-label="menu">
+            menu
+          </mat-icon>
         </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <a routerLink="/welcome" routerLinkActive="inactive">welcome</a>
-        </button>
         <button mat-menu-item>
           <a routerLink="/mission-board">mission board</a>
         </button>
