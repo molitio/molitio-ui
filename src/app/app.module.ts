@@ -15,6 +15,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavigationMenuComponent } from './components/navigation-menu/navigation-menu.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { CommunityHubComponent } from './components/community-hub/community-hub.component';
+import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MolitioLogoComponent,
     NavigationBarComponent,
     PageNotFoundComponent,
-    MissionBoardComponent
+    MissionBoardComponent,
+    NavigationMenuComponent,
+    MessagesComponent,
+    CommunityHubComponent,
+    ResourceManagementComponent
   ],
   imports: [
     BrowserModule,
