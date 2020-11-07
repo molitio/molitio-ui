@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MolitioLogoComponent } from './molitio-logo.component';
+import { LogoComponent } from './logo.component';
 
-describe('MolitioLogoComponent', () => {
-  let component: MolitioLogoComponent;
-  let fixture: ComponentFixture<MolitioLogoComponent>;
+describe('LogoComponent', () => {
+  let component: LogoComponent;
+  let fixture: ComponentFixture<LogoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MolitioLogoComponent ]
+      declarations: [ LogoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MolitioLogoComponent);
+    fixture = TestBed.createComponent(LogoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
