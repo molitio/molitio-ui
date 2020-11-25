@@ -1,12 +1,12 @@
 {
-  "name": "molitio-ng",
+  "name": "molitio-ui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "dev": "ng serve --aot=true --open",
     "docker": "ng build --prod && dockerPublishLocal",
-    "dockerPublishLocal": "docker build -t molitio-ng .",
+    "dockerPublishLocal": "docker build -t molitio-ui .",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

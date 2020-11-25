@@ -12,26 +12,26 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$molitio-ng-primary: mat-palette($mat-indigo);
-$molitio-ng-accent: mat-palette($mat-pink, A200, A100, A400);
+$molitio-ui-primary: mat-palette($mat-indigo);
+$molitio-ui-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$molitio-ng-warn: mat-palette($mat-red);
+$molitio-ui-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$molitio-ng-theme: mat-light-theme((
+$molitio-ui-theme: mat-light-theme((
   color: (
-    primary: $molitio-ng-primary,
-    accent: $molitio-ng-accent,
-    warn: $molitio-ng-warn,
+    primary: $molitio-ui-primary,
+    accent: $molitio-ui-accent,
+    warn: $molitio-ui-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($molitio-ng-theme);
+@include angular-material-theme($molitio-ui-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

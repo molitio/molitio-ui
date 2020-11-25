@@ -18,7 +18,7 @@ export class MissionBoardComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  getScreenHeight(event?) {
+  getScreenHeight(event?:any) {
     this.mapsViewHeight = window.innerHeight - 100;
   }
   ngOnInit(): void {}

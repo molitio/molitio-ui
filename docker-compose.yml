@@ -3,9 +3,9 @@
 version: '3.4'
 services:
   
-  molitio-ng:
-    build: './ui/molitio-ng'
-    image: 'molitio-ng'
+  molitio-ui:
+    build: './ui/molitio-ui'
+    image: 'molitio-ui'
     ports: 
       # - 80:80
       # - 443:443
