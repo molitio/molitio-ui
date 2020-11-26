@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as Amqp from 'amqp-ts';
+import { Subject } from 'rxjs';
+import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { MolitioResource } from 'src/domain/resource/molitioResource';
 
 @Component({
   selector: 'molitio-messages',
@@ -7,19 +9,14 @@ import * as Amqp from 'amqp-ts';
   styleUrls: ['./messages.component.scss'],
 })
 export class MessagesComponent implements OnInit {
-  //probably going websockets and api
-  connection = new Amqp.Connection('amqp://localhost');
-  queue = this.connection.declareQueue('desideratium', { durable: false });
-  messages: string[] = [];
-
-  getMessages = () => {
-    this.queue.activateConsumer((message) => {
-      this.messages.push(message.getContent().toString());
-    }, {noAck: true});
-  };
+  messages: MolitioResource[] = [];
+  socket: WebSocketSubject<MolitioResource> = webSocket('ws://localhost/api/amqp/');
 
   constructor() {
-    this.getMessages();
+    this.socket.subscribe(
+      (msg) => this.messages.push(msg),
+      (err) => console.log(err.message)
+    );
   }
 
   ngOnInit(): void {}

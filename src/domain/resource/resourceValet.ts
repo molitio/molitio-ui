@@ -1,5 +1,5 @@
-import { Resource } from "./resource";
+import { MolitioResource } from "./molitioResource";
 
 export interface ResourceValet{
-    resources: Resource[]
+    resources: MolitioResource[]
 }
