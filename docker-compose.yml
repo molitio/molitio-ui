@@ -1,29 +1,26 @@
 # Currently not working
 
-version: '3.4'
+version: "3.8"
 services:
-  
   molitio-ui:
-    build: './ui/molitio-ui'
-    image: 'molitio-ui'
-    ports: 
-      # - 80:80
+    build: "."
+    ports:
+      - 80:80
       # - 443:443
-      - 4200:4200
-      - 4201:4201
-    #environment: 
-      # - ENV=dev
+      #- 4200:4200
+      # - 4201:4201
+    environment:
+      - MOLITIO_UIPORT=80
     restart: always
-    
-  #molitio-api:
-   # build: './molitio-api'
-    #volumes: 
-     # - .:/usr/app/
-      #- /usr/app/node_modules
-    #ports:
-     # - "3000:3000"
-    #environment: 
-     # NODE_ENV: development
-      #NODE_ENV: production
-    #restart: always
 
+  #molitio-api:
+  # build: './molitio-api'
+  #volumes:
+  # - .:/usr/app/
+  #- /usr/app/node_modules
+  #ports:
+  # - "3000:3000"
+  #environment:
+  # NODE_ENV: development
+  #NODE_ENV: production
+  #restart: always
