@@ -10,7 +10,8 @@ import { MolitioResource } from 'src/domain/resource/molitioResource';
 })
 export class MessagesComponent implements OnInit {
   messages: MolitioResource[] = [];
-  socket: WebSocketSubject<MolitioResource> = webSocket('ws://localhost/api/amqp/');
+MOLITIO_API_PORT=3000
+socket: WebSocketSubject<MolitioResource> = webSocket('ws://localhost:5000/amqp');
 
   constructor() {
     this.socket.subscribe(

@@ -4,6 +4,13 @@
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
-    "pathRewrite": {"^/api": "/api"}
+    "pathRewrite": { "^/api": "/api" }
+  },
+  "/amqp": {
+    "target": "ws://localhost:5000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": { "^/amqp": "/amqp" }
   }
 }

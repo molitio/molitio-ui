@@ -19,6 +19,8 @@ import { NavigationMenuComponent } from './components/navigation-menu/navigation
 import { MessagesComponent } from './components/messages/messages.component';
 import { CommunityHubComponent } from './components/community-hub/community-hub.component';
 import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
+import { DesideratumComponent } from './components/desideratum/desideratum.component';
+import { ContributionComponent } from './components/contribution/contribution.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ResourceManagementComponent } from './components/resource-management/re
     NavigationMenuComponent,
     MessagesComponent,
     CommunityHubComponent,
-    ResourceManagementComponent
+    ResourceManagementComponent,
+    DesideratumComponent,
+    ContributionComponent
   ],
   imports: [
     BrowserModule,
