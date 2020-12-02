@@ -10,13 +10,24 @@ import { MolitioResource } from 'src/domain/resource/molitioResource';
 })
 export class MessagesComponent implements OnInit {
   messages: MolitioResource[] = [];
-MOLITIO_API_PORT=3000
-socket: WebSocketSubject<MolitioResource> = webSocket('ws://localhost:5000/amqp');
+  MOLITIO_API_PORT = 3000;
+  socket: WebSocketSubject<string> = webSocket(
+    'ws://localhost:5000/amqp'
+  );
 
   constructor() {
     this.socket.subscribe(
-      (msg) => this.messages.push(msg),
-      (err) => console.log(err.message)
+      (msg) => {
+        var result = JSON.parse(msg);
+        console.log(result);
+        this.messages.push(result as MolitioResource);
+      },
+      (err) => {
+        console.log(err.message);
+      },
+      () => {
+        console.log('completed');
+      }
     );
   }
 
