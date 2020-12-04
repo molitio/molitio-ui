@@ -21,6 +21,7 @@ import { CommunityHubComponent } from './components/community-hub/community-hub.
 import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
 import { DesideratumComponent } from './components/desideratum/desideratum.component';
 import { ContributionComponent } from './components/contribution/contribution.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ContributionComponent } from './components/contribution/contribution.co
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,

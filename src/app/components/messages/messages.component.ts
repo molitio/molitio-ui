@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
-import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { WebSocketSubject } from 'rxjs/webSocket';
+import { DesideratumService } from 'src/app/services/desideratum.service';
 import { MolitioResource } from 'src/domain/resource/molitioResource';
 
 @Component({
@@ -11,25 +11,27 @@ import { MolitioResource } from 'src/domain/resource/molitioResource';
 export class MessagesComponent implements OnInit {
   messages: MolitioResource[] = [];
   MOLITIO_API_PORT = 3000;
-  socket: WebSocketSubject<string> = webSocket(
-    'ws://localhost:5000/amqp'
-  );
+  private socket: WebSocketSubject<MolitioResource>;
 
-  constructor() {
+  constructor(private desideratumService: DesideratumService) {
+    this.socket = desideratumService.connect('ws://localhost:5000/amqp');
+  }
+
+  ngOnInit(): void {
     this.socket.subscribe(
       (msg) => {
-        var result = JSON.parse(msg);
-        console.log(result);
-        this.messages.push(result as MolitioResource);
+        console.log(msg.name);
+        this.messages.push(msg);
       },
+  
       (err) => {
-        console.log(err.message);
+        console.log(err);
       },
-      () => {
-        console.log('completed');
-      }
+      () => console.log('complete')
     );
   }
 
-  ngOnInit(): void {}
+  signalHello(): void {
+    this.desideratumService.signalHello();
+  }
 }

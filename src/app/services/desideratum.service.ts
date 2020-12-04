@@ -1,44 +1,52 @@
-import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
 import { Injectable } from '@angular/core';
-import { Observable, Observer, Subject } from 'rxjs';
-import * as RxjsRx from 'rxjs/Rx';
+import { Observable, of } from 'rxjs';
+import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { catchError, tap } from 'rxjs/operators';
 import { MolitioResource } from 'src/domain/resource/molitioResource';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DesideratumService {
-  constructor() {}
+  private subject: WebSocketSubject<MolitioResource>;
 
-  private subject: Subject<MessageEvent>;
+  constructor() {
+    this.subject = this.connect('ws://localhost:5000/amqp');
+  }
 
-  public connect(url: string): Subject<MessageEvent> {
+  public connect(url: string): WebSocketSubject<MolitioResource> {
     if (!this.subject) {
       this.subject = this.create(url);
     }
     return this.subject;
   }
 
-  private create(url: string): Subject<MessageEvent> {
-    const ws = new WebSocket(url);
-
-    let observable = new Observable((observer: Observer<MessageEvent>) => {
-      ws.onmessage = observer.next.bind(observer);
-      ws.onerror = observer.error.bind(observer);
-      ws.onclose = observer.complete.bind(observer);
+  public signalHello(): void {
+    this.subject.next({
+      name: 'Bread',
+      description: 'Whole grains loaf of bread',
+      type: {
+        name: 'basic.food',
+      },
     });
+  }
 
-    let observer = {
-      // check if need to be Object instead of MolitioResource
-      next: (desideratum: MolitioResource) => {
-        if (ws.readyState === WebSocket.OPEN) {
-          ws.send(JSON.stringify(desideratum));
-        }
+  private create(url: string): WebSocketSubject<MolitioResource> {
+    const ws = webSocket<MolitioResource>(url);
+
+    /*     ws.subscribe(
+      (msg) => {
+        console.log(`Received: ${msg}`);
+      },
+      (err) => {
+        console.log(`Error: ${err.message}`);
+      },
+      () => {
+        console.log('complete');
       }
-    };
-    
-    // need to investigate the depreciated .create() replacement
-    return new Subject()
+    ); */
 
+    // need to investigate the depreciated .create() replacement
+    return ws;
   }
 }

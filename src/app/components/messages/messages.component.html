@@ -1,5 +1,5 @@
 <div class="container dev-outline">
-   
+   <button type="button" (click)="signalHello()">Signal Hello</button>
     <span>Messages: new message from site</span>
     <ul>
         <li *ngFor="let message of messages">{{message.name}}</li>
