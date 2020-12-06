@@ -23,7 +23,7 @@ export class MessagesComponent implements OnInit {
         console.log(msg.name);
         this.messages.push(msg);
       },
-  
+
       (err) => {
         console.log(err);
       },
