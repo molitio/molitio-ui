@@ -1,11 +1,23 @@
 .logo {
-    max-width: 80px;
+    margin: 0px;
+    padding: 0px;
+   /*  max-width: 80px; */
+}
+
+a {
+    margin: 0px;
+}
+
+.logo-card{
+    position: relative;
+    height: 64px;
+    padding: 0px;
 }
 
 .logo img {
-    width: 80px;
+/*     width: 80px;
     height: 80px;
-
+ */
 }
 
 .brand {

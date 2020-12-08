@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LogoComponent implements OnInit {
   brand = 'molitio';
   brandMessage = '#human';
-  logoSrc = 'assets/static/molitio-logo_v3.png';
+  logoSrc = 'assets/static/molitio-ico-64x64.png';
 
   constructor() {}
 

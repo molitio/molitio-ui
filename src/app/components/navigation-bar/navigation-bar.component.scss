@@ -1,13 +1,17 @@
-.logo {
-/*     position: fixed;
-    top: 0em;
-    left: 0em;
-    height: 40px;
-    width: 40px; */
+.toolbar {
+  display: flex;
+  height: 64px;
 }
 
-.nav{
-/*     position: fixed;
-    top: 0em;
-    left: 40px; */
+.toolbar-spacer-menu {
+  flex: 1 1 auto;
+}
+
+.toolbar-spacer-logo {
+  flex: 1 1 auto;
+}
+
+.toolbar-spacer-messages {
+  flex: 1 1 auto;
+  flex-wrap: wrap;
 }

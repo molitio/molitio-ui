@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +24,7 @@ import { ResourceManagementComponent } from './components/resource-management/re
 import { DesideratumComponent } from './components/desideratum/desideratum.component';
 import { ContributionComponent } from './components/contribution/contribution.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TopicAssistantComponent } from './components/topic-assistant/topic-assistant.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommunityHubComponent,
     ResourceManagementComponent,
     DesideratumComponent,
-    ContributionComponent
+    ContributionComponent,
+    TopicAssistantComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,10 +51,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
+    MatToolbarModule,
+    MatCardModule,
     FlexLayoutModule,
-    GoogleMapsModule
+    GoogleMapsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
