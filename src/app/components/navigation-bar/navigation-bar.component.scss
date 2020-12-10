@@ -1,14 +1,19 @@
 .toolbar {
   display: flex;
+  align-items: center;
   height: 64px;
+  padding: 0;
 }
 
 .toolbar-spacer-menu {
-  flex: 1 1 auto;
+  min-width: 64px;
+  flex-shrink: 0;
 }
 
 .toolbar-spacer-logo {
-  flex: 1 1 auto;
+  min-width: 132px;
+  max-height: 64px;
+  flex-shrink: 0;
 }
 
 .toolbar-spacer-messages {

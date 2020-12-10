@@ -1,4 +1,4 @@
-.siteBackground {
+.site-background {
   /*  background-image: url(./assets/static/earth.jpg);
   background-repeat: no-repeat;
   background-position: 0;
@@ -14,14 +14,21 @@
   z-index: -1;*/
 }
 
-.navigatonBar {
+.navigaton-bar {
+  position: sticky;
+  top: 0px;
+
 /* position: fixed;
 top: 0;
 z-index: 9; */
 }
 
-.routerOutlet {
-/* position: relative;
-top: 20px;
-z-index: 1; */
+.messages-container{
+  position: sticky;
+  bottom: 0px;
+}
+
+.router-outlet {
+position: relative;
+
 }
