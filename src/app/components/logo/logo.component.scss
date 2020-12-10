@@ -4,12 +4,13 @@
    /*  max-width: 80px; */
 }
 
+
 a {
     margin: 0px;
 }
 
-.logo-card{
-    position: relative;
+.logo-container{
+    display: flex;
     height: 64px;
     padding: 0px;
 }
