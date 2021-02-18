@@ -6,12 +6,13 @@ on:
 name: Build and deploy molitio-ui to Amazon ECS
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
-        
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -19,6 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
+        npm install -g angular-cli
         npm run build-prod
         npm ci
         npm run build:ci
