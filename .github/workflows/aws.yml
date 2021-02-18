@@ -20,9 +20,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        npm install angular-cli
         npm ci
-        npm run build-prod:ci
+        npm install angular-cli
+        npm run build-prod
 
   deploy:
     name: Deploy
