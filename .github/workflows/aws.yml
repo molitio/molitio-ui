@@ -21,7 +21,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: |
         npm ci
-        npm install angular-cli
         npm run build-prod
 
   deploy:
