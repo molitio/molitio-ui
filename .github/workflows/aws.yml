@@ -1,6 +1,7 @@
 on:
   push:
-    branches: [ $default-branch ]
+    branches: 
+      - master
 
 name: Build and deploy molitio-ui to Amazon ECS
 
