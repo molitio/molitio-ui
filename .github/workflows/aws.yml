@@ -21,9 +21,12 @@ jobs:
     - run: |
         npm ci
         npm run build-prod
-    - name: ui-ditribution-package
+    - name: push molitio-ui
       uses: actions/upload-artifact@v2
-      path: dist
+      with: 
+        name: molitio-ui
+        path: dist
+        retention-days: 1
 
   deployToAws:
     name: Deploy
@@ -44,10 +47,10 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: pull ui-ditribution-package
+    - name: pull molitio-ui
       uses: actions/download-artifact@2
       with:
-        name: ui-ditribution-package 
+        name: molitio-ui
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
