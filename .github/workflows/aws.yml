@@ -27,6 +27,11 @@ jobs:
         name: molitio-ui
         path: dist
         retention-days: 1
+    - name: push task-definition
+      uses: actions/upload-artifact@v2
+      with: 
+        name: task-definition
+        path: task-definition.json
 
   deployToAws:
     name: Deploy
@@ -51,6 +56,11 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: molitio-ui
+
+    - name: pull task-definition
+      uses: actions/download-artifact@v2
+      with:
+        name: task-definition
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
