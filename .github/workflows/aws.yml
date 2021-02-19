@@ -48,7 +48,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: pull molitio-ui
-      uses: actions/download-artifact@2
+      uses: actions/download-artifact@v2
       with:
         name: molitio-ui
 
