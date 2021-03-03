@@ -26,6 +26,10 @@ import { ContributionComponent } from './components/contribution/contribution.co
 import { HttpClientModule } from '@angular/common/http';
 import { TopicAssistantComponent } from './components/topic-assistant/topic-assistant.component';
 
+import { MolitioLibrary } from '@molitio/molitio-lib/lib/molitio-lib';
+//TODO: Make molitio-lib export work with this syntax
+//import { MolitioLibrary } from '@molitio/molitio-lib';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +59,7 @@ import { TopicAssistantComponent } from './components/topic-assistant/topic-assi
     MatCardModule,
     FlexLayoutModule,
     GoogleMapsModule,
+    MolitioLibrary
   ],
   providers: [],
   bootstrap: [AppComponent],
