@@ -6,6 +6,7 @@ import { MissionBoardComponent } from './components/mission-board/mission-board.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CommunityHubComponent } from './components/community-hub/community-hub.component';
 import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
+import { MolitioLibrary } from '@molitio/molitio-lib/lib/molitio-lib' 
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -17,8 +18,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+  
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+   molitioLib = new MolitioLibrary();
+}
