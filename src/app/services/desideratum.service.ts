@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 import { catchError, tap } from 'rxjs/operators';
-import { MolitioResource } from 'src/domain/resource/molitioResource';
+import { MolitioResource } from '@molitio/molitio-lib/lib/domain/resource/molitioResource';
+import { wssConfig } from '@molitio/molitio-lib/lib/config/wssConfig'
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,8 @@ export class DesideratumService {
   private subject: WebSocketSubject<MolitioResource>;
 
   constructor() {
-    this.subject = this.connect('ws://localhost:5000/amqp');
+    // this.subject = this.connect('ws://localhost:5000/amqp');
+    this.subject = this.connect(wssConfig.wsDesideratumUrl);
   }
 
   public connect(url: string): WebSocketSubject<MolitioResource> {
