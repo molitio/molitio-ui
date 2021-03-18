@@ -3,7 +3,7 @@ name: molitio-ui CI
 on:
   push:
     branches: 
-      - master
+      - release
 
 jobs:
 
