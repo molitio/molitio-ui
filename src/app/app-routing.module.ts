@@ -6,7 +6,6 @@ import { MissionBoardComponent } from './components/mission-board/mission-board.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CommunityHubComponent } from './components/community-hub/community-hub.component';
 import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
-import { MolitioLibrary } from '@molitio/molitio-lib/lib/molitio-lib' 
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -24,5 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-   molitioLib = new MolitioLibrary();
 }

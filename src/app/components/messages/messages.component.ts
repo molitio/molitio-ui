@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebSocketSubject } from 'rxjs/webSocket';
-import { DesideratumService } from 'src/app/services/desideratum.service';
-import { MolitioResource } from 'src/domain/resource/molitioResource';
+import { ResourceService } from 'src/app/services/resource.service';
+import { IMolitioResource } from '@molitio/molitio-lib/lib/domain/resource/molitioResource';
 
 @Component({
   selector: 'molitio-messages',
@@ -9,12 +9,12 @@ import { MolitioResource } from 'src/domain/resource/molitioResource';
   styleUrls: ['./messages.component.scss'],
 })
 export class MessagesComponent implements OnInit {
-  messages: MolitioResource[] = [];
+  messages: IMolitioResource[] = [];
   MOLITIO_API_PORT = 3000;
-  private socket: WebSocketSubject<MolitioResource>;
+  private socket: WebSocketSubject<IMolitioResource>;
 
-  constructor(private desideratumService: DesideratumService) {
-    this.socket = desideratumService.connect('ws://localhost:5000/amqp');
+  constructor(private resourceService: ResourceService) {
+    this.socket = resourceService.connect('ws://localhost:4224/signal');
   }
 
   ngOnInit(): void {
@@ -32,6 +32,6 @@ export class MessagesComponent implements OnInit {
   }
 
   signalHello(): void {
-    this.desideratumService.signalHello();
+    this.resourceService.signalHello();
   }
 }

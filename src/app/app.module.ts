@@ -21,10 +21,10 @@ import { NavigationMenuComponent } from './components/navigation-menu/navigation
 import { MessagesComponent } from './components/messages/messages.component';
 import { CommunityHubComponent } from './components/community-hub/community-hub.component';
 import { ResourceManagementComponent } from './components/resource-management/resource-management.component';
-import { DesideratumComponent } from './components/desideratum/desideratum.component';
-import { ContributionComponent } from './components/contribution/contribution.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TopicAssistantComponent } from './components/topic-assistant/topic-assistant.component';
+import { ResourceComponent } from './components/resource/resource.component';
+import { BrandInfoComponent } from './brand-info/brand-info.component';
 
 
 @NgModule({
@@ -39,9 +39,9 @@ import { TopicAssistantComponent } from './components/topic-assistant/topic-assi
     MessagesComponent,
     CommunityHubComponent,
     ResourceManagementComponent,
-    DesideratumComponent,
-    ContributionComponent,
     TopicAssistantComponent,
+    ResourceComponent,
+    BrandInfoComponent,
   ],
   imports: [
     BrowserModule,

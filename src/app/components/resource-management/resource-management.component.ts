@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resource-management.component.scss']
 })
 export class ResourceManagementComponent implements OnInit {
+  screenWidth = 1000;
 
   constructor() { }
 
