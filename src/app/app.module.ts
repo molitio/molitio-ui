@@ -24,7 +24,7 @@ import { ResourceManagementComponent } from './components/resource-management/re
 import { HttpClientModule } from '@angular/common/http';
 import { TopicAssistantComponent } from './components/topic-assistant/topic-assistant.component';
 import { ResourceComponent } from './components/resource/resource.component';
-import { BrandInfoComponent } from './brand-info/brand-info.component';
+import { BrandInfoComponent } from './components/brand-info/brand-info.component';
 
 
 @NgModule({
