@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebSocketSubject } from 'rxjs/webSocket';
 import { ResourceService } from 'src/app/services/resource.service';
-import { IMolitioResource } from '@molitio/molitio-lib/lib/domain/resource/molitioResource';
+import { IMolitioResource } from '@molitio/molitio-lib'
 
 @Component({
   selector: 'molitio-messages',

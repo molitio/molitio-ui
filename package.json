@@ -30,7 +30,7 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
-    "@molitio/molitio-lib": "0.0.21",
+    "@molitio/molitio-lib": "0.0.23",
     "amqp-ts": "^1.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
